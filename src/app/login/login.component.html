@@ -1,1 +1,39 @@
-<p>login works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col align-self-start">
+      <div class="container" style="padding-top: 10px;">
+        <h1>Log In</h1>
+        <p class="lead sm">Welcome Back! 🎉</p>
+        <hr>
+        <form [formGroup]="loginForm" (ngSubmit)="logIn()">
+          <div class="form-group">
+            <label for="Username">Username</label>
+            <input type="text" formControlName='username' class="form-control" id="Username" placeholder="Username">
+          </div>
+          <div class="form-group">
+            <label for="inputPassword4">Password</label>
+            <input type="password" formControlName='password' class="form-control" id="inputPassword4"
+                placeholder="Password">
+          </div>
+          <button type="submit" class="btn btn-primary" [disabled]='!loginForm.valid' >Log in</button>
+        </form>
+      </div>
+      <br>
+      <div class="text-right">
+        New User? Sign Up <a [routerLink]="['/signup']" >here</a>
+      </div>
+      <div *ngIf='message' >
+          <div class="alert alert-danger" role="alert">
+            {{message}}
+          </div>
+      </div>
+    </div>
+
+    <div class="col align-self-end">
+      <div class="container">
+
+      </div>
+    </div>
+  </div>
+
+</div>
