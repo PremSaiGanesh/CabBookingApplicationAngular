@@ -1,6 +1,7 @@
-import { CustomerService } from './../customer.service';
+import { CustomerService } from '../customer.service';
 import { Component, OnInit } from '@angular/core';
-import { ICustomer } from '../Customer';
+import { ICustomer } from 'src/app/utils/Customer';
+
 
 @Component({
   selector: 'app-profile',

@@ -3,6 +3,8 @@ import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { ICustomer } from './customer';
 import { catchError } from 'rxjs/operators'
+import { IAdmin } from './Admin';
+import { IDriver } from './Driver';
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +20,9 @@ export class LoginService {
   }
   constructor(private httpClient:HttpClient) { }
 
-  private login_url = 'http://localhost:8085/customer/login';
+  private Customer_Login_url = 'http://localhost:8085/customer/login';
+  private Admin_Login_url = 'http://localhost:8085/admin/login';
+  private Driver_Login_url = 'http://localhost:8085/driver/login';
 
   httpOptions = {
     headers: new HttpHeaders({
@@ -26,11 +30,27 @@ export class LoginService {
     })
   }
 
-  validateLogin(data: any): Observable<ICustomer> {
-    return this.httpClient.post<ICustomer>(this.login_url,JSON.stringify(data),this.httpOptions).pipe(
+  customerLogin(data: any): Observable<ICustomer> {
+    return this.httpClient.post<ICustomer>(this.Customer_Login_url,JSON.stringify(data),this.httpOptions).pipe(
       catchError(this.handleError)
     );
   }
+
+
+
+  driverLogin(data: any): Observable<IDriver> {
+    return this.httpClient.post<IDriver>(this.Driver_Login_url,JSON.stringify(data),this.httpOptions).pipe(
+      catchError(this.handleError)
+    );
+  }
+
+
+  adminLogin(data: any): Observable<IAdmin> {
+    return this.httpClient.post<IAdmin>(this.Admin_Login_url,JSON.stringify(data),this.httpOptions).pipe(
+      catchError(this.handleError)
+    );
+  }
+
 
   handleError(eResponse: HttpErrorResponse) {
     if (eResponse.error instanceof ErrorEvent) {

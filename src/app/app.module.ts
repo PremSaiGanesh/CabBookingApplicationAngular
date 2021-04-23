@@ -16,6 +16,19 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { UpdateComponent } from './customer/update/update.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { CustomerSignUpComponent } from './signup/customer-sign-up/customer-sign-up.component';
+import { DriverSignUpComponent } from './signup/driver-sign-up/driver-sign-up.component';
+import { DriverLogInComponent } from './login/driver-log-in/driver-log-in.component';
+import { CustomerLogInComponent } from './login/customer-log-in/customer-log-in.component';
+import { AdminLogInComponent } from './login/admin-log-in/admin-log-in.component';
+import { AdminProfileComponent } from './admin/admin-profile/admin-profile.component';
+import { AdminUpdateComponent } from './admin/admin-update/admin-update.component';
+import { AllAdminsSearchComponent } from './admin/all-admins-search/all-admins-search.component';
+import { AllAdminsUpdateComponent } from './admin/all-admins-update/all-admins-update.component';
+import { AllCustomerUpdateComponent } from './admin/all-customer-update/all-customer-update.component';
+import { AllCustomersSearchComponent } from './admin/all-customers-search/all-customers-search.component';
+import { AllDriversSearchComponent } from './admin/all-drivers-search/all-drivers-search.component';
+import { AllDriversUpdateComponent } from './admin/all-drivers-update/all-drivers-update.component';
 
 
 @NgModule({
@@ -30,7 +43,20 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     AboutComponent,
     ProfileComponent,
     UpdateComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    CustomerSignUpComponent,
+    DriverSignUpComponent,
+    DriverLogInComponent,
+    CustomerLogInComponent,
+    AdminLogInComponent,
+    AdminProfileComponent,
+    AdminUpdateComponent,
+    AllAdminsSearchComponent,
+    AllAdminsUpdateComponent,
+    AllCustomerUpdateComponent,
+    AllCustomersSearchComponent,
+    AllDriversSearchComponent,
+    AllDriversUpdateComponent
   ],
   imports: [
     BrowserModule,

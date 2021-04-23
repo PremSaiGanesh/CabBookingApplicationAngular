@@ -11,7 +11,9 @@ import { IUser } from '../User';
 export class SignupService {
 
 
-  private signUp_url = 'http://localhost:8085/customer';
+  private Customer_signUp_url = 'http://localhost:8085/customer';
+
+  private Driver_signUp_url = 'http://localhost:8085/driver';
 
   httpOptions = {
     headers: new HttpHeaders({
@@ -21,13 +23,23 @@ export class SignupService {
 
   constructor(private httpClient: HttpClient) { }
 
-  confirmSignIn(user: IUser): Observable<IUser> {
+  customerSignUp(user: IUser): Observable<IUser> {
 
     //? PlaceHolder ==> uname =sai, pass:123, returns false:
-    return this.httpClient.post<IUser>(this.signUp_url, JSON.stringify(user), this.httpOptions).  pipe(
+    return this.httpClient.post<IUser>(this.Customer_signUp_url, JSON.stringify(user), this.httpOptions).pipe(
       catchError(this.handleError)
     );
   }
+
+
+  driverSignUp(user: IUser): Observable<IUser> {
+
+    //? PlaceHolder ==> uname =sai, pass:123, returns false:
+    return this.httpClient.post<IUser>(this.Driver_signUp_url, JSON.stringify(user), this.httpOptions).pipe(
+      catchError(this.handleError)
+    );
+  }
+
 
   handleError(eResponse: HttpErrorResponse) {
     if (eResponse.error instanceof ErrorEvent) {

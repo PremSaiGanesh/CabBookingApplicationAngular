@@ -1,1 +1,42 @@
-<p>admin works!</p>
+<div class="container">
+
+
+<div class="d-flex">
+  <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-pills" orientation="vertical">
+    <li ngbNavItem="welcome">
+      <a  ngbNavLink>Welcome</a>
+      <ng-template ngbNavContent>
+        <p class="display-3">
+          Admin Panel
+        </p>
+      </ng-template>
+    </li>
+    <li ngbNavItem="profile">
+      <a [routerLink]="['./profile']" ngbNavLink>Profile</a>
+      <ng-template ngbNavContent>
+       <router-outlet></router-outlet>
+      </ng-template>
+    </li>
+    <li ngbNavItem="manageAdmins">
+      <a  [routerLink]="['./manageAdmins']" ngbNavLink>Manage Admins</a>
+      <ng-template ngbNavContent>
+        <router-outlet></router-outlet>
+      </ng-template>
+    </li>
+    <li ngbNavItem="manageCustomers">
+      <a   [routerLink]="['./manageCustomers']" ngbNavLink>Manage Customers</a>
+      <ng-template ngbNavContent>
+        <router-outlet></router-outlet>
+      </ng-template>
+    </li>
+    <li ngbNavItem="manageDrivers">
+      <a [routerLink]="['./manageDrivers']" ngbNavLink>Manage Drivers</a>
+      <ng-template ngbNavContent>
+        <router-outlet></router-outlet>
+      </ng-template>
+    </li>
+  </ul>
+  <div [ngbNavOutlet]="nav" class="ml-4"></div>
+</div>
+
+</div>

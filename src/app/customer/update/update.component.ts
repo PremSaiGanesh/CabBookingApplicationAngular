@@ -1,7 +1,9 @@
 import { Router } from '@angular/router';
-import { CustomerService } from './../customer.service';
+
 import { Component, OnInit } from '@angular/core';
-import { ICustomer } from '../Customer';
+
+import { CustomerService } from '../customer.service';
+import { ICustomer } from 'src/app/utils/Customer';
 
 @Component({
   selector: 'app-update',

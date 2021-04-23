@@ -1,8 +1,9 @@
 import { Observable, throwError } from 'rxjs';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { ICustomer } from './Customer';
+
 import { catchError } from 'rxjs/operators'
+import { ICustomer } from '../utils/Customer';
 
 
 
