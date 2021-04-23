@@ -52,9 +52,9 @@ const routes: Routes = [
       { path: 'profile', component: AdminProfileComponent },
       { path: 'update', component: AdminUpdateComponent },
       { path: 'manageAdmins', component: AllAdminsSearchComponent },
-      { path: 'updateAdmins', component: AllAdminsUpdateComponent },
+      { path: 'updateAdmins/:adminId', component: AllAdminsUpdateComponent },
       { path: 'manageCustomers', component: AllCustomersSearchComponent },
-      { path: 'updateCustomers', component: AllCustomerUpdateComponent },
+      { path: 'updateCustomers/:customerId', component: AllCustomerUpdateComponent },
       { path: 'manageDrivers', component: AllDriversSearchComponent },
       { path: 'updateDrivers', component: AllDriversUpdateComponent }
     ]

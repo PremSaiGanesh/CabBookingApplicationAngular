@@ -1,0 +1,8 @@
+.ActionUpdate:hover{
+  background-color: #5bc0de;
+  color:#f7f7f7;
+}
+.ActionDelete:hover{
+  background-color: #d9534f;
+  color: #f7f7f7;
+}

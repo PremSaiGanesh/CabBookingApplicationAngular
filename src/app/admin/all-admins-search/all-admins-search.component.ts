@@ -1,4 +1,6 @@
+import { AdminService } from './../admin.service';
 import { Component, OnInit } from '@angular/core';
+import { IAdmin } from 'src/app/utils/Admin';
 
 @Component({
   selector: 'app-all-admins-search',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AllAdminsSearchComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private _adminService: AdminService) { }
+  adminsArray: IAdmin[] = [];
   ngOnInit(): void {
+    this.allAdminsList()
+  }
+
+  allAdminsList() {
+    this._adminService.getAllAdmins().subscribe(
+      (data: IAdmin[]) => this.adminsArray = data
+    )
+  }
+
+  deleteAdminById(adminId: number) {
+    this._adminService.deleteAdminByAdminId(adminId).
+        subscribe((data: IAdmin[]) => this.adminsArray = data);
   }
 
 }

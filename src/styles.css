@@ -1,4 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+
 a{
   cursor: pointer;
+}
+.ActionUpdate:hover{
+  background-color: #5bc0de;
+  color:#f7f7f7;
+}
+.ActionDelete:hover{
+  background-color: #d9534f;
+  color: #f7f7f7;
 }

@@ -1,1 +1,54 @@
-<p>all-admins-search works!</p>
+<div class="container">
+  <h2 class="text-center text-info"> Manage Admins </h2>
+  <table class="table">
+    <thead>
+      <th>
+        #
+      </th>
+      <th>
+        Id
+      </th>
+      <th>
+        Username
+      </th>
+      <th>
+        Email
+      </th>
+      <th>
+        Password
+      </th>
+      <th>
+        Mobile Number
+      </th>
+      <th>
+        Action
+      </th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let admin of adminsArray; let i=index">
+        <td> {{i+1}} </td>
+        <td> {{admin.adminId}} </td>
+        <td> {{admin.username}} </td>
+        <td> {{admin.email}} </td>
+        <td> {{admin.password}} </td>
+        <td> {{admin.mobileNumber}} </td>
+        <td>
+
+          <div class="btn-group">
+            <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+              Action
+            </button>
+            <div class="dropdown-menu">
+
+              <a class="dropdown-item ActionUpdate" [routerLink]="['../updateAdmins',admin.adminId]">Edit</a>
+              <a class="dropdown-item ActionDelete" (click)="deleteAdminById(admin.adminId)" >Delete</a>
+
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<router-outlet></router-outlet>
