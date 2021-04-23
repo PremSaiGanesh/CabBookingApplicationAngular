@@ -1,6 +1,90 @@
-<div class="container">
-  <p class="display-4">
-        <a [routerLink]="['./profile']">Profile</a>
-  </p>
+<div class="container" style="padding-top: 20px;">
+
+
+  <div class="d-flex justify-content-start flex-row bd-highlight">
+    <ul ngbNav [routerLink]="['./profile']" #nav="ngbNav" [(activeId)]="active" class="nav-pills"
+        orientation="vertical">
+      <li ngbNavItem="top">
+        <a ngbNavLink>Welcome</a>
+        <ng-template ngbNavContent>
+          <div class="container">
+            <h3>
+              Welcome!
+            </h3>
+          </div>
+
+        </ng-template>
+      </li>
+      <li ngbNavItem="profile">
+        <a ngbNavLink>Profile</a>
+        <ng-template ngbNavContent>
+          <router-outlet></router-outlet>
+        </ng-template>
+      </li>
+      <li ngbNavItem="middle">
+        <a ngbNavLink>History</a>
+        <ng-template ngbNavContent>
+          <div class="container">
+            <div class="row">
+              <div style="padding-top: 30px;">
+                <div *ngFor='let trip of trips'>
+
+                  <div class="card border-primary mb-3">
+                    <div class="card-header text-center"> {{trip.fromLocation}} ➜ {{trip.toLocation}} </div>
+                    <div class="card-body">
+                      <h5 class="card-title text-center"> <img src="assets/icons/location-radius.svg" alt="" srcset="">
+                        {{trip.fromLocation}} - {{trip.toLocation}}</h5>
+                      <h6 class="card-subtitle mb-2 text-muted text-center">
+                        {{trip.distanceInKm}} Kms | {{ trip.bill |currency:'INR'}}
+                      </h6>
+                      <hr>
+                      <div class="text-center">
+                        <p class="card-text">
+                          Start: {{trip.fromDateTime | date:'medium'}}
+                        </p>
+                        <p class="card-text">
+                          End: {{trip.toDateTime | date:'medium'}}
+                        </p>
+                      </div>
+                      <!--Driver & Cab Details Below-->
+                      <br>
+                      <div>
+                        <p class="text-center"><strong>Driver Details</strong></p>
+                        <p class="card-text text-center">
+                          {{trip.driver.username}} 👨🏻‍✈️ | <code>❤ {{trip.driver.rating }} </code>
+                        </p>
+                        <p class="card-text text-center">
+                          📞 <a href="tel:{{trip.driver.mobileNumber}} "> {{trip.driver.mobileNumber}}</a>
+                        </p>
+                        <p class="card-text text-center">
+                          License : {{trip.driver.licenseNo}}
+                        </p>
+
+                        <p class="card-text text-center">
+                          <b> Cab Details </b>
+                        </p>
+                        <p class="card-text text-center">
+                         {{trip.driver.cab.carType}} | {{trip.driver.cab.perKmRate | currency:'INR'}}/Km
+                        </p>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </ng-template>
+      </li>
+      <li ngbNavItem="bottom">
+        <a ngbNavLink>Wallet</a>
+        <ng-template ngbNavContent>
+          <p>Will Be Added Soon</p>
+        </ng-template>
+      </li>
+    </ul>
+
+    <div [ngbNavOutlet]="nav" class="ml-4"></div>
+  </div>
 </div>
-<router-outlet></router-outlet>

@@ -9,12 +9,16 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./customer.component.css']
 })
 export class CustomerComponent implements OnInit {
-
-  constructor(private actRouter: ActivatedRoute, private _customerService:CustomerService) { }
-
+  active = 'top';
+  trips: any;
+  constructor(private actRouter: ActivatedRoute, private _customerService: CustomerService) { }
+  public isCollapsed = false;
   ngOnInit(): void {
     this._customerService.setCutomerId(this.actRouter.snapshot.params['customerId']);
-
+    this._customerService.getCustomerTrips().subscribe((data) => {
+      this.trips = data;
+      console.log(this.trips);
+    });
   }
 
 

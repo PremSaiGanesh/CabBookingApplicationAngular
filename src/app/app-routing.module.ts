@@ -9,6 +9,9 @@ import { AppComponent } from './app.component';
 import { CustomerComponent } from './customer/customer.component';
 import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './customer/profile/profile.component';
+import { UpdateComponent } from './customer/update/update.component';
+import { AuthGuard } from './auth.guard';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -18,13 +21,16 @@ const routes: Routes = [
   { path: 'signup', component: SignupComponent },
   { path: 'admin', component: AdminComponent },
   {
-    path: 'customer/:customerId', component: CustomerComponent,
+    path: 'customer/:customerId', component: CustomerComponent, /** canActivate:[AuthGuard] **/
     children: [
-      { path: 'profile', component: ProfileComponent }
+      { path: 'profile', component: ProfileComponent },
+      { path: 'update', component: UpdateComponent }
     ]
   },
   { path: 'driver', component: DriverComponent },
-  { path: '**', component: HomeComponent }
+
+  { path: 'oops', component: PageNotFoundComponent },
+  { path: '**', redirectTo: 'oops', pathMatch: 'full' }
 ];
 
 @NgModule({

@@ -1,6 +1,6 @@
 import { CustomerService } from './../customer.service';
 import { Component, OnInit } from '@angular/core';
-import { ICustomer } from './Customer';
+import { ICustomer } from '../Customer';
 
 @Component({
   selector: 'app-profile',
@@ -10,13 +10,15 @@ import { ICustomer } from './Customer';
 export class ProfileComponent implements OnInit {
 
   constructor(private _customerService: CustomerService) { }
-  customer:ICustomer = {
+  customer: ICustomer = {
     customerId: 0,
-    email:'',
+    email: '',
     mobileNumber: '',
     password: '',
     username: ''
   };
+
+
   ngOnInit(): void {
     this._customerService.getCustomerDetails().subscribe((data: ICustomer) => {
       this.customer = data;
@@ -24,6 +26,8 @@ export class ProfileComponent implements OnInit {
     })
 
   }
+
+
 
 
 }

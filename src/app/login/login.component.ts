@@ -30,6 +30,7 @@ export class LoginComponent implements OnInit {
       data => {
         this.customerId = data.customerId; console.log(this.customerId);
         if (this.customerId != 0 && this.customerId != undefined) {
+        this._loginService.setAuthFlag(true);
           this.router.navigate(['customer',this.customerId])
         }
         else {

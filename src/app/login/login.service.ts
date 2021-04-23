@@ -10,10 +10,12 @@ import { catchError } from 'rxjs/operators'
 export class LoginService {
 
   authFlag: boolean = false;
-  setAuthFlag(): boolean {
+  setAuthFlag(flag:boolean) {
+   this.authFlag=flag;
+  }
+  getAuthFlag(): boolean {
     return this.authFlag;
   }
-
   constructor(private httpClient:HttpClient) { }
 
   private login_url = 'http://localhost:8085/customer/login';

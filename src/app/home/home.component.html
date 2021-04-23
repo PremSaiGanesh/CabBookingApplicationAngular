@@ -1,11 +1,16 @@
 <div class="container">
+
   <div class="jumbotron">
+
     <h1 class="display-4">Cab Booking Application</h1>
     <p class="lead">Bon Voyage </p>
     <hr class="my-4">
     <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-    <p class="lead">
-      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-    </p>
+    <div class="form-inline my-2 my-lg-0">
+      <button class="btn btn-outline-primary my-2 my-sm-0" [routerLink]="['/login']">Login</button>
+      &nbsp;
+      <button class="btn btn-outline-info my-2 my-sm-0" [routerLink]="['/signup']">Sign up</button>
+    </div>
   </div>
+
 </div>

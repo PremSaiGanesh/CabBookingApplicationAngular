@@ -1,14 +1,14 @@
 <div class="container">
-<p class="text-left">
-  <a class="lead  btn-link"  [routerLink]="['../update']">Edit</a>
-</p>
+  <p class="text-left">
+    <a class="lead  btn-link" (click)="updatecustomer()">Save</a>
+  </p>
   <table class="table  table-borderless">
     <tr>
       <td>
         Username
       </td>
       <td>
-        {{customer.username}}
+        <input class="form-control " [(ngModel)]="customer.username">
       </td>
     </tr>
     <tr>
@@ -16,7 +16,7 @@
         Email
       </td>
       <td>
-        {{customer.email}}
+        <input class="form-control" [(ngModel)]="customer.email">
       </td>
     </tr>
     <tr>
@@ -24,7 +24,7 @@
         Password
       </td>
       <td>
-        {{customer.password}}
+        <input class="form-control" [(ngModel)]="customer.password">
       </td>
     </tr>
     <tr>
@@ -32,7 +32,7 @@
         Mobile Number
       </td>
       <td>
-        {{customer.mobileNumber}}
+        <input class="form-control" [(ngModel)]="customer.mobileNumber">
       </td>
     </tr>
   </table>
