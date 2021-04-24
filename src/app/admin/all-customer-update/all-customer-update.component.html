@@ -1,1 +1,40 @@
-<p>all-customer-update works!</p>
+<div class="container">
+  <p class="text-left">
+    <a class="lead  btn-link" (click)="updateCustomer()">Save</a>
+  </p>
+  <table class="table  table-borderless">
+    <tr>
+      <td>
+        Username
+      </td>
+      <td>
+        <input class="form-control " [(ngModel)]="customer.username">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Email
+      </td>
+      <td>
+        <input class="form-control" [(ngModel)]="customer.email">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Password
+      </td>
+      <td>
+        <input class="form-control" [(ngModel)]="customer.password">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Mobile Number
+      </td>
+      <td>
+        <input class="form-control" [(ngModel)]="customer.mobileNumber">
+      </td>
+    </tr>
+  </table>
+
+</div>

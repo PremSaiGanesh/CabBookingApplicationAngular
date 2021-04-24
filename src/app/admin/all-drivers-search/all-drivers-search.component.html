@@ -1,1 +1,51 @@
-<p>all-drivers-search works!</p>
+<div class="container">
+  <h2 class="text-center text-info"> Manage drivers </h2>
+  <table class="table">
+    <thead>
+      <th>
+        #
+      </th>
+      <th>
+        Id
+      </th>
+      <th>
+        Username
+      </th>
+      <th>
+        Email
+      </th>
+      <th>
+        Password
+      </th>
+      <th>
+        Mobile Number
+      </th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let driver of driversArray; let i=index">
+        <td> {{i+1}} </td>
+        <td> {{driver.driverId}} </td>
+        <td> {{driver.username}} </td>
+        <td> {{driver.email}} </td>
+        <td> {{driver.password}} </td>
+        <td> {{driver.mobileNumber}} </td>
+
+    <td>
+
+          <div class="btn-group">
+            <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+              Action
+            </button>
+              <div class="dropdown-menu">
+              <a class="dropdown-item ActionUpdate" [routerLink]="['../updateDrivers',driver.driverId]">Edit</a>
+            <!-- <a class="dropdown-item ActionDelete" (click)="deleteDriverById(driver.driverId)" >Delete</a>
+            --> </div>
+          </div>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+<router-outlet></router-outlet>

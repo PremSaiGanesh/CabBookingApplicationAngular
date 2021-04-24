@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { IDriver } from 'src/app/utils/Driver';
+import { AdminService } from '../admin.service';
 
 @Component({
   selector: 'app-all-drivers-search',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AllDriversSearchComponent implements OnInit {
 
-  constructor() { }
+  driversArray:IDriver[]=[]
+  constructor(private _adminService:AdminService) { }
 
   ngOnInit(): void {
+    this.getAllDrivers()
+  }
+
+  getAllDrivers(){
+    this._adminService.getAllDrivers().subscribe(
+      (data:IDriver[])=>this.driversArray=data
+    )
   }
 
 }

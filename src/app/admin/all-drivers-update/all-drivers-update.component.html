@@ -1,1 +1,40 @@
-<p>all-drivers-update works!</p>
+<div class="container">
+  <p class="text-left">
+    <a class="lead  btn-link" (click)="updateDriver()">Save</a>
+  </p>
+  <table class="table  table-borderless">
+    <tr>
+      <td>
+        Username
+      </td>
+      <td>
+        <input class="form-control " name='username' [(ngModel)]="driver.username">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Email
+      </td>
+      <td>
+        <input class="form-control" name = 'email' [(ngModel)]="driver.email">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Password
+      </td>
+      <td>
+        <input class="form-control" name='password' [(ngModel)]="driver.password">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Mobile Number
+      </td>
+      <td>
+        <input class="form-control" name='mobileNumber' [(ngModel)]="driver.mobileNumber">
+      </td>
+    </tr>
+  </table>
+
+</div>

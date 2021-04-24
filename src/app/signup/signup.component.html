@@ -4,14 +4,14 @@
       <div class="container">
         <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
           <li [ngbNavItem]="1">
-            <a [routerLink]="['./driver']" ngbNavLink>Customer</a>
+            <a [routerLink]="['./driver']" ngbNavLink>Driver</a>
             <ng-template ngbNavContent>
 
               <router-outlet></router-outlet>
             </ng-template>
           </li>
           <li [ngbNavItem]="2">
-            <a [routerLink]="['./customer']" ngbNavLink>Driver</a>
+            <a [routerLink]="['./customer']" ngbNavLink>Customer</a>
             <ng-template ngbNavContent>
               <router-outlet></router-outlet>
             </ng-template>

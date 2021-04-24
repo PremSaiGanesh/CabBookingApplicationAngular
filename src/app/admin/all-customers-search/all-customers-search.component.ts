@@ -21,5 +21,10 @@ export class AllCustomersSearchComponent implements OnInit {
       (data: ICustomer[]) => this.customersArray = data
     )
   }
+  deleteCustomerById(customerId: number) {
+    this._adminService.deleteCustomerById(customerId).subscribe(
+      (data: ICustomer[]) => this.customersArray = data
+    )
 
+  }
 }

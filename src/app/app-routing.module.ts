@@ -27,7 +27,7 @@ import { AuthGuard } from './auth.guard';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
-  //{ path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   {
@@ -56,7 +56,7 @@ const routes: Routes = [
       { path: 'manageCustomers', component: AllCustomersSearchComponent /* ,outlet:'manageCustomersRoute' */ },
       { path: 'updateCustomers/:customerId', component: AllCustomerUpdateComponent/* ,outlet:'updateCustomersRoute'  */},
       { path: 'manageDrivers', component: AllDriversSearchComponent/* ,outlet:'manageDriversRoute'  */},
-      { path: 'updateDrivers', component: AllDriversUpdateComponent/* ,outlet:'updateDriversRoute' */ }
+      { path: 'updateDrivers/:driverId', component: AllDriversUpdateComponent/* ,outlet:'updateDriversRoute' */ }
     ]
   },
   {

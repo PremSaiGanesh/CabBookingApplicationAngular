@@ -10,7 +10,20 @@ import { Component, OnInit } from '@angular/core';
 export class DriverSignUpComponent implements OnInit {
 
   constructor(private fb: FormBuilder, private _signupService: SignupService) { }
-
+/**
+ *   driver: IDriver = {
+    cab: {
+      "cabId": 0,
+      "carType": "",
+      "perKmRate": 0
+    },
+    driverId: 0,
+    email: '',
+    mobileNumber: '',
+    password: '',
+    username: ''
+  }
+ */
 
   alertType!: string;
   signUpForm!: FormGroup;

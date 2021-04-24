@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators'
 import { IUser } from '../User';
+import { IDriver } from '../utils/Driver';
 
 @Injectable({
   providedIn: 'root'
@@ -32,10 +33,10 @@ export class SignupService {
   }
 
 
-  driverSignUp(user: IUser): Observable<IUser> {
+  driverSignUp(user: IUser): Observable<IDriver> {
 
     //? PlaceHolder ==> uname =sai, pass:123, returns false:
-    return this.httpClient.post<IUser>(this.Driver_signUp_url, JSON.stringify(user), this.httpOptions).pipe(
+    return this.httpClient.post<IDriver>(this.Driver_signUp_url, JSON.stringify(user), this.httpOptions).pipe(
       catchError(this.handleError)
     );
   }

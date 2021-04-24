@@ -41,14 +41,11 @@
               Action
             </button>
             <div class="dropdown-menu">
-
               <a class="dropdown-item ActionUpdate" [routerLink]="['../updateCustomers',customer.customerId]">Edit</a>
-            <!--   <a class="dropdown-item ActionDelete" (click)="deleteCustomerById(customer.customerId)" >Delete</a>    -->
-
+            <a class="dropdown-item ActionDelete" (click)="deleteCustomerById(customer.customerId)" >Delete</a>
             </div>
           </div>
         </td>
-
       </tr>
     </tbody>
   </table>
