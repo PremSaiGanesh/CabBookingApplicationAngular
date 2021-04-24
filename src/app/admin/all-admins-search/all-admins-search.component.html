@@ -41,7 +41,7 @@
             </button>
             <div class="dropdown-menu">
 
-              <a class="dropdown-item ActionUpdate" [routerLink]="['../updateAdmins',admin.adminId]">Edit</a>
+              <a class="dropdown-item ActionUpdate" (click)="updateRedirect(admin.adminId)">Edit</a>
               <a class="dropdown-item ActionDelete" (click)="deleteAdminById(admin.adminId)" >Delete</a>
 
             </div>

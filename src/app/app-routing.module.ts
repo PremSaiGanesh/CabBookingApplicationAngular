@@ -27,7 +27,7 @@ import { AuthGuard } from './auth.guard';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  //{ path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   {
@@ -49,14 +49,14 @@ const routes: Routes = [
   {
     path: 'admin/:adminId', component: AdminComponent, /** canActivate:[AuthGuard] **/
     children: [
-      { path: 'profile', component: AdminProfileComponent },
-      { path: 'update', component: AdminUpdateComponent },
-      { path: 'manageAdmins', component: AllAdminsSearchComponent },
-      { path: 'updateAdmins/:adminId', component: AllAdminsUpdateComponent },
-      { path: 'manageCustomers', component: AllCustomersSearchComponent },
-      { path: 'updateCustomers/:customerId', component: AllCustomerUpdateComponent },
-      { path: 'manageDrivers', component: AllDriversSearchComponent },
-      { path: 'updateDrivers', component: AllDriversUpdateComponent }
+      { path: 'profile', component: AdminProfileComponent},
+      { path: 'update', component: AdminUpdateComponent, /* outlet:'adminUpdateRoute' */ },
+      { path: 'manageAdmins', component: AllAdminsSearchComponent/* , outlet:'manageAdminsRoute' */ },
+      { path: 'updateAdmins/:adminId', component: AllAdminsUpdateComponent/* , outlet:'updateAdminsRoute' */ },
+      { path: 'manageCustomers', component: AllCustomersSearchComponent /* ,outlet:'manageCustomersRoute' */ },
+      { path: 'updateCustomers/:customerId', component: AllCustomerUpdateComponent/* ,outlet:'updateCustomersRoute'  */},
+      { path: 'manageDrivers', component: AllDriversSearchComponent/* ,outlet:'manageDriversRoute'  */},
+      { path: 'updateDrivers', component: AllDriversUpdateComponent/* ,outlet:'updateDriversRoute' */ }
     ]
   },
   {

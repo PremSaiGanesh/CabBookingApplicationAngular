@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { AdminService } from './../admin.service';
 import { Component, OnInit } from '@angular/core';
 import { IAdmin } from 'src/app/utils/Admin';
@@ -9,7 +10,7 @@ import { IAdmin } from 'src/app/utils/Admin';
 })
 export class AllAdminsSearchComponent implements OnInit {
 
-  constructor(private _adminService: AdminService) { }
+  constructor(private _adminService: AdminService,private router:Router) { }
   adminsArray: IAdmin[] = [];
   ngOnInit(): void {
     this.allAdminsList()
@@ -24,6 +25,10 @@ export class AllAdminsSearchComponent implements OnInit {
   deleteAdminById(adminId: number) {
     this._adminService.deleteAdminByAdminId(adminId).
         subscribe((data: IAdmin[]) => this.adminsArray = data);
+  }
+
+  updateRedirect(adminId:number){
+    this.router.navigate(['admin',this._adminService.adminId,'updateAdmins',adminId])
   }
 
 }

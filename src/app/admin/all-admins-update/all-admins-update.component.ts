@@ -20,7 +20,7 @@ export class AllAdminsUpdateComponent implements OnInit {
   constructor(private _adminService:AdminService, private router:Router,private actRouter: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.adminId=this.actRouter.snapshot.params['customerId'];
+    this.adminId=this.actRouter.snapshot.params['adminId'];
     this._adminService.getAdminDetailsById(this.adminId).subscribe((data: IAdmin) => {
       this.admin = data;
 
@@ -29,7 +29,7 @@ export class AllAdminsUpdateComponent implements OnInit {
   updateAdmin(){
     this._adminService.updateAdmin(this.admin).subscribe((data)=>{
       this.admin=data;
-        this.router.navigate(['admin',this._adminService.getAdminId(),'manageAdmins'])
+     this.router.navigate(['admin',this._adminService.getAdminId(),'manageAdmins',])
     })
   }
 }
