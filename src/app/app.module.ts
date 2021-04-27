@@ -32,6 +32,10 @@ import { AllDriversUpdateComponent } from './admin/all-drivers-update/all-driver
 import { NgSelectModule } from '@ng-select/ng-select';
 import { LocationPipe } from './Pipes/location.pipe';
 import { CalculateBillPipe } from './Pipes/calculate-bill.pipe';
+import { BookingComponent } from './customer/booking/booking.component';
+import { HistoryComponent } from './customer/history/history.component';
+import { WalletComponent } from './customer/wallet/wallet.component';
+import { TripComponent } from './customer/trip/trip.component';
 
 
 @NgModule({
@@ -62,6 +66,10 @@ import { CalculateBillPipe } from './Pipes/calculate-bill.pipe';
     AllDriversUpdateComponent,
     LocationPipe,
     CalculateBillPipe,
+    BookingComponent,
+    HistoryComponent,
+    WalletComponent,
+    TripComponent,
 
   ],
   imports: [

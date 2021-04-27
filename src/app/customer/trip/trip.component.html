@@ -1,0 +1,47 @@
+<div class="container">
+  <h3>
+    Welcome!
+  </h3>
+
+  <table>
+    <tr>
+      <td>
+        <div class="form-group">
+          <small>Pick-Up Point</small>
+          <select class="form-control" [(ngModel)]='locationId'>
+            <option *ngFor='let location of locationsArray' [value]="location.id"> {{location.from_Location}}
+            </option>
+          </select>
+        </div>
+      </td>
+      <td>&nbsp;&nbsp; </td>
+      <td>
+        <div *ngIf='locationId' class="form-group">
+          <small>Destination</small>
+          <select class="form-control" [(ngModel)]='distance'>
+            <option *ngFor="let item of locationsArray | location : locationId" [value]="item.Distance">
+              {{item.to_Location}}</option>
+          </select>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <h4 class="text-info" *ngIf='distance'>Distance : {{distance}} </h4>
+
+</div>
+<div>
+  <div class="row">
+    <div class="col-sm-6" *ngFor="let item of drivers | calculateBill:distance">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Cab Name : {{item.cab.carType}} </h5>
+          <p class="card-text">Driver Name : {{item.username}} </p>
+          <p class="card-text">Mobile No : {{item.mobileNumber}} </p>
+          <p class="card-text">License No : {{item.licenseNo}} </p>
+          <p class="card-text">Ratings : {{item.rating}}</p>
+          <a class="btn btn-danger" (click)='bookTrip(item.driverId,item.cab.perKmRate )' >Trip Cost : Rs. {{item.cab.perKmRate | number }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

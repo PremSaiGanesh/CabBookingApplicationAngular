@@ -34,7 +34,7 @@ a:hover {
 	font-size:30px;
 }
 .navbar-toggle:before {
-	background-image:url(/assets/menu.png);
+
 	background-repeat:no-repeat;
 }
 header .navbar-white a {
@@ -56,7 +56,7 @@ header .navbar-white {
 	box-shadow:0px 3px 2px 0px rgba(50,50,50,0.1);
 }
 .item.header {
-	background-image:url(assets/homeimg.png);
+	background-image:url("/assets/homeimg.png");
 	background-repeat:no-repeat;
 	background-position:0% top;
 	background-size:contain;

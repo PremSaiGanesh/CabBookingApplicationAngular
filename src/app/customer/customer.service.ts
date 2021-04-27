@@ -13,6 +13,12 @@ import { ICustomer } from '../utils/Customer';
 export class CustomerService {
   customerId!: number;
   customer!: ICustomer;
+  driverId!: number;
+  distance!: number;
+  bill!: number;
+  from_location!: string
+  to_location!: string
+
 
 
   httpOptions = {
@@ -25,26 +31,65 @@ export class CustomerService {
 
   constructor(private httpClient: HttpClient) { }
 
+  setFromLocation(from_location: string) {
+    this.from_location = from_location
+  }
+  getFromLocation(): string {
+    return this.from_location
+  }
+  setToLocation(to_location: string) {
+    this.to_location = to_location
+  }
+  getToLocation(): string {
+    return this.to_location
+  }
+
+  setBill(bill: number) {
+    this.bill = bill
+  }
+
+  getBill(): number {
+    return this.bill
+  }
+
   setCutomerId(cutomerId: number) {
     this.customerId = cutomerId;
   }
+  getCustomerId(): number {
+    return this.customerId
+  }
+
+  setDriverId(driverId: number) {
+    this.driverId = driverId
+  }
+  getDriverId(): number {
+    return this.driverId
+  }
+  setDistance(distance: number) {
+    this.distance = distance
+  }
+  getDistance(): number {
+    return this.distance
+  }
+
+
 
 
   customer_url = 'http://localhost:8085/customer/';
-  trip_url='http://localhost:8085/tripbooking/';
-  location_url='assets/Location.json'
-drivers_url='http://localhost:8085/driver'
+  trip_url = 'http://localhost:8085/tripbooking/';
+  location_url = 'assets/Location.json'
+  drivers_url = 'http://localhost:8085/driver'
   getCustomerTrips(): Observable<any> {
     return this.httpClient.get<any>(this.trip_url + this.customerId).pipe(
       catchError(this.handleError)
     );
   }
 
-  getLocations(){
+  getLocations() {
     return this.httpClient.get<any>(this.location_url)
   }
 
-  getAllDrivers():Observable<any>{
+  getAllDrivers(): Observable<any> {
     return this.httpClient.get<any>(this.drivers_url)
   }
 

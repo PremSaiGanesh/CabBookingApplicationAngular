@@ -1,3 +1,6 @@
+import { TripComponent } from './customer/trip/trip.component';
+import { HistoryComponent } from './customer/history/history.component';
+import { BookingComponent } from './customer/booking/booking.component';
 import { AllDriversUpdateComponent } from './admin/all-drivers-update/all-drivers-update.component';
 import { AllDriversSearchComponent } from './admin/all-drivers-search/all-drivers-search.component';
 import { AllCustomerUpdateComponent } from './admin/all-customer-update/all-customer-update.component';
@@ -49,13 +52,13 @@ const routes: Routes = [
   {
     path: 'admin/:adminId', component: AdminComponent, /** canActivate:[AuthGuard] **/
     children: [
-      { path: 'profile', component: AdminProfileComponent},
+      { path: 'profile', component: AdminProfileComponent },
       { path: 'update', component: AdminUpdateComponent, /* outlet:'adminUpdateRoute' */ },
       { path: 'manageAdmins', component: AllAdminsSearchComponent/* , outlet:'manageAdminsRoute' */ },
       { path: 'updateAdmins/:adminId', component: AllAdminsUpdateComponent/* , outlet:'updateAdminsRoute' */ },
       { path: 'manageCustomers', component: AllCustomersSearchComponent /* ,outlet:'manageCustomersRoute' */ },
-      { path: 'updateCustomers/:customerId', component: AllCustomerUpdateComponent/* ,outlet:'updateCustomersRoute'  */},
-      { path: 'manageDrivers', component: AllDriversSearchComponent/* ,outlet:'manageDriversRoute'  */},
+      { path: 'updateCustomers/:customerId', component: AllCustomerUpdateComponent/* ,outlet:'updateCustomersRoute'  */ },
+      { path: 'manageDrivers', component: AllDriversSearchComponent/* ,outlet:'manageDriversRoute'  */ },
       { path: 'updateDrivers/:driverId', component: AllDriversUpdateComponent/* ,outlet:'updateDriversRoute' */ }
     ]
   },
@@ -63,13 +66,17 @@ const routes: Routes = [
     path: 'customer/:customerId', component: CustomerComponent, /** canActivate:[AuthGuard] **/
     children: [
       { path: 'profile', component: ProfileComponent },
-      { path: 'update', component: UpdateComponent }
+      { path: 'update', component: UpdateComponent },
+      { path: 'book', component: BookingComponent },
+      { path: 'history', component: HistoryComponent },
+      { path: 'trip', component: TripComponent },
+
     ]
   },
   { path: 'driver', component: DriverComponent }, /** canActivate:[AuthGuard] **/
 
-  { path: 'oops', component: PageNotFoundComponent },
-  { path: '**', redirectTo: 'oops', pathMatch: 'full' }
+ // { path: 'oops', component: PageNotFoundComponent },
+  //{ path: '**', redirectTo: 'oops', pathMatch: 'full' }
 ];
 
 @NgModule({

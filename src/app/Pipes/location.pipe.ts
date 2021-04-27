@@ -6,6 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class LocationPipe implements PipeTransform {
 
   transform(locations: locations[], id:number){
+    console.log(id)
     return locations.filter(loc=>loc.id== id)[0]["possibleROutes"]
   }
 
