@@ -33,12 +33,6 @@ export class CustomerComponent implements OnInit {
     this._customerService.getLocations().subscribe((data: locations[]) => this.locationsArray = data)
   }
 
-  calculateBill(){
-  this.getDrivers()
-
-
-  }
-
 
 getDrivers(){
  this._customerService.getAllDrivers().subscribe(
