@@ -29,6 +29,9 @@ import { AllCustomerUpdateComponent } from './admin/all-customer-update/all-cust
 import { AllCustomersSearchComponent } from './admin/all-customers-search/all-customers-search.component';
 import { AllDriversSearchComponent } from './admin/all-drivers-search/all-drivers-search.component';
 import { AllDriversUpdateComponent } from './admin/all-drivers-update/all-drivers-update.component';
+import { NgSelectModule } from '@ng-select/ng-select';
+import { LocationPipe } from './Pipes/location.pipe';
+import { CalculateBillPipe } from './Pipes/calculate-bill.pipe';
 
 
 @NgModule({
@@ -56,7 +59,10 @@ import { AllDriversUpdateComponent } from './admin/all-drivers-update/all-driver
     AllCustomerUpdateComponent,
     AllCustomersSearchComponent,
     AllDriversSearchComponent,
-    AllDriversUpdateComponent
+    AllDriversUpdateComponent,
+    LocationPipe,
+    CalculateBillPipe,
+
   ],
   imports: [
     BrowserModule,
@@ -64,7 +70,8 @@ import { AllDriversUpdateComponent } from './admin/all-drivers-update/all-driver
     NgbModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgSelectModule
 
   ],
   providers: [NgbAlertConfig],

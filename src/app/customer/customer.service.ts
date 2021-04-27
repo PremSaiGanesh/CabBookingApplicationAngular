@@ -32,11 +32,20 @@ export class CustomerService {
 
   customer_url = 'http://localhost:8085/customer/';
   trip_url='http://localhost:8085/tripbooking/';
-
+  location_url='assets/Location.json'
+drivers_url='http://localhost:8085/driver'
   getCustomerTrips(): Observable<any> {
     return this.httpClient.get<any>(this.trip_url + this.customerId).pipe(
       catchError(this.handleError)
     );
+  }
+
+  getLocations(){
+    return this.httpClient.get<any>(this.location_url)
+  }
+
+  getAllDrivers():Observable<any>{
+    return this.httpClient.get<any>(this.drivers_url)
   }
 
 

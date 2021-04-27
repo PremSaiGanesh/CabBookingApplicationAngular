@@ -1,0 +1,618 @@
+[
+  {
+    "id": 1,
+    "from_Location": "Vijayawada",
+    "possibleROutes": [
+      {
+        "LId": 1,
+        "to_Location": "Kurnool",
+        "Distance": 350
+      },
+      {
+        "LId": 2,
+        "to_Location": "Chennai",
+        "Distance": 450
+      },
+      {
+        "LId": 3,
+        "to_Location": "Machilipatnam",
+        "Distance": 68
+      },
+      {
+        "LId": 4,
+        "to_Location": "Avadi",
+        "Distance": 462
+      },
+      {
+        "LId": 5,
+        "to_Location": "Guntur",
+        "Distance": 41
+      },
+      {
+        "LId": 6,
+        "to_Location": "Vizag",
+        "Distance": 353
+      },
+      {
+        "LId": 7,
+        "to_Location": "Hyderabad",
+        "Distance": 274
+      },
+      {
+        "LId": 8,
+        "to_Location": "Bangalore",
+        "Distance": 661
+      },
+      {
+        "LId": 9,
+        "to_Location": "Tirupati",
+        "Distance": 413
+      },
+      {
+        "LId": 10,
+        "to_Location": "Nellore",
+        "Distance": 282
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "from_Location": "Kurnool",
+    "possibleROutes": [
+      {
+        "LId": 1,
+        "to_Location": "Vijayawada",
+        "Distance": 350
+      },
+      {
+        "LId": 2,
+        "to_Location": "Chennai",
+        "Distance": 464
+      },
+      {
+        "LId": 3,
+        "to_Location": "Machilipatnam",
+        "Distance": 413
+      },
+      {
+        "LId": 4,
+        "to_Location": "Avadi",
+        "Distance": 453
+      },
+      {
+        "LId": 5,
+        "to_Location": "Guntur",
+        "Distance": 398
+      },
+      {
+        "LId": 6,
+        "to_Location": "Vizag",
+        "Distance": 700
+      },
+      {
+        "LId": 7,
+        "to_Location": "Hyderabad",
+        "Distance": 214
+      },
+      {
+        "LId": 8,
+        "to_Location": "Bangalore",
+        "Distance": 359
+      },
+      {
+        "LId": 9,
+        "to_Location": "Tirupati",
+        "Distance": 344
+      },
+      {
+        "LId": 10,
+        "to_Location": "Nellore",
+        "Distance": 324
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "from_Location": "Chennai",
+    "possibleROutes": [
+      {
+        "LId": 1,
+        "to_Location": "Vijayawada",
+        "Distance": 450
+      },
+      {
+        "LId": 2,
+        "to_Location": "Kurnool",
+        "Distance": 456
+      },
+      {
+        "LId": 3,
+        "to_Location": "Machilipatnam",
+        "Distance": 517
+      },
+      {
+        "LId": 4,
+        "to_Location": "Avadi",
+        "Distance": 24
+      },
+      {
+        "LId": 5,
+        "to_Location": "Guntur",
+        "Distance": 414
+      },
+      {
+        "LId": 6,
+        "to_Location": "Vizag",
+        "Distance": 803
+      },
+      {
+        "LId": 7,
+        "to_Location": "Hyderabad",
+        "Distance": 626
+      },
+      {
+        "LId": 8,
+        "to_Location": "Bangalore",
+        "Distance": 346
+      },
+      {
+        "LId": 9,
+        "to_Location": "Tirupati",
+        "Distance": 133
+      },
+      {
+        "LId": 10,
+        "to_Location": "Nellore",
+        "Distance": 324
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "from_Location": "Machilipatnam",
+    "possibleROutes": [
+      {
+        "LId": 1,
+        "to_Location": "Vijayawada",
+        "Distance": 67
+      },
+      {
+        "LId": 2,
+        "to_Location": "Kurnool",
+        "Distance": 413
+      },
+      {
+        "LId": 3,
+        "to_Location": "Chennai",
+        "Distance": 517
+      },
+      {
+        "LId": 4,
+        "to_Location": "Avadi",
+        "Distance": 525
+      },
+      {
+        "LId": 5,
+        "to_Location": "Guntur",
+        "Distance": 104
+      },
+      {
+        "LId": 6,
+        "to_Location": "Vizag",
+        "Distance": 374
+      },
+      {
+        "LId": 7,
+        "to_Location": "Hyderabad",
+        "Distance": 341
+      },
+      {
+        "LId": 8,
+        "to_Location": "Bangalore",
+        "Distance": 724
+      },
+      {
+        "LId": 9,
+        "to_Location": "Tirupati",
+        "Distance": 477
+      },
+      {
+        "LId": 10,
+        "to_Location": "Nellore",
+        "Distance": 345
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "from_Location": "Avadi",
+    "possibleROutes": [
+      {
+        "LId": 1,
+        "to_Location": "Vijayawada",
+        "Distance": 455
+      },
+      {
+        "LId": 2,
+        "to_Location": "Kurnool",
+        "Distance": 778
+      },
+      {
+        "LId": 3,
+        "to_Location": "Chennai",
+        "Distance": 21
+      },
+      {
+        "LId": 4,
+        "to_Location": "Machilipatnam",
+        "Distance": 521
+      },
+      {
+        "LId": 5,
+        "to_Location": "Guntur",
+        "Distance": 418
+      },
+      {
+        "LId": 6,
+        "to_Location": "Vizag",
+        "Distance": 807
+      },
+      {
+        "LId": 7,
+        "to_Location": "Hyderabad",
+        "Distance": 630
+      },
+      {
+        "LId": 8,
+        "to_Location": "Bangalore",
+        "Distance": 335
+      },
+      {
+        "LId": 9,
+        "to_Location": "Tirupati",
+        "Distance": 125
+      },
+      {
+        "LId": 10,
+        "to_Location": "Nellore",
+        "Distance": 178
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "from_Location": "Guntur",
+    "possibleROutes": [
+      {
+        "LId": 1,
+        "to_Location": "Vijayawada",
+        "Distance": 35
+      },
+      {
+        "LId": 2,
+        "to_Location": "Kurnool",
+        "Distance": 298
+      },
+      {
+        "LId": 3,
+        "to_Location": "Chennai",
+        "Distance": 415
+      },
+      {
+        "LId": 4,
+        "to_Location": "Machilipatnam",
+        "Distance": 101
+      },
+      {
+        "LId": 5,
+        "to_Location": "Avadi",
+        "Distance": 422
+      },
+      {
+        "LId": 6,
+        "to_Location": "Vizag",
+        "Distance": 381
+      },
+      {
+        "LId": 7,
+        "to_Location": "Hyderabad",
+        "Distance": 305
+      },
+      {
+        "LId": 8,
+        "to_Location": "Bangalore",
+        "Distance": 621
+      },
+      {
+        "LId": 9,
+        "to_Location": "Tirupati",
+        "Distance": 374
+      },
+      {
+        "LId": 10,
+        "to_Location": "Nellore",
+        "Distance": 243
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "from_Location": "Vizag",
+    "possibleROutes": [
+      {
+        "LId": 1,
+        "to_Location": "Vijayawada",
+        "Distance": 347
+      },
+      {
+        "LId": 2,
+        "to_Location": "Kurnool",
+        "Distance": 694
+      },
+      {
+        "LId": 3,
+        "to_Location": "Chennai",
+        "Distance": 798
+      },
+      {
+        "LId": 4,
+        "to_Location": "Machilipatnam",
+        "Distance": 368
+      },
+      {
+        "LId": 5,
+        "to_Location": "Avadi",
+        "Distance": 806
+      },
+      {
+        "LId": 6,
+        "to_Location": "Guntur",
+        "Distance": 385
+      },
+      {
+        "LId": 7,
+        "to_Location": "Hyderabad",
+        "Distance": 622
+      },
+      {
+        "LId": 8,
+        "to_Location": "Bangalore",
+        "Distance": 1000
+      },
+      {
+        "LId": 9,
+        "to_Location": "Tirupati",
+        "Distance": 758
+      },
+      {
+        "LId": 10,
+        "to_Location": "Nellore",
+        "Distance": 626
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "from_Location": "Hyderabad",
+    "possibleROutes": [
+      {
+        "LId": 1,
+        "to_Location": "Vijayawada",
+        "Distance": 274
+      },
+      {
+        "LId": 2,
+        "to_Location": "Kurnool",
+        "Distance": 212
+      },
+      {
+        "LId": 3,
+        "to_Location": "Chennai",
+        "Distance": 626
+      },
+      {
+        "LId": 4,
+        "to_Location": "Machilipatnam",
+        "Distance": 340
+      },
+      {
+        "LId": 5,
+        "to_Location": "Avadi",
+        "Distance": 634
+      },
+      {
+        "LId": 6,
+        "to_Location": "Guntur",
+        "Distance": 307
+      },
+      {
+        "LId": 7,
+        "to_Location": "Vizag",
+        "Distance": 625
+      },
+      {
+        "LId": 8,
+        "to_Location": "Bangalore",
+        "Distance": 569
+      },
+      {
+        "LId": 9,
+        "to_Location": "Tirupati",
+        "Distance": 554
+      },
+      {
+        "LId": 10,
+        "to_Location": "Nellore",
+        "Distance": 464
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "from_Location": "Bangalore",
+    "possibleROutes": [
+      {
+        "LId": 1,
+        "to_Location": "Vijayawada",
+        "Distance": 661
+      },
+      {
+        "LId": 2,
+        "to_Location": "Kurnool",
+        "Distance": 359
+      },
+      {
+        "LId": 3,
+        "to_Location": "Chennai",
+        "Distance": 347
+      },
+      {
+        "LId": 4,
+        "to_Location": "Machilipatnam",
+        "Distance": 723
+      },
+      {
+        "LId": 5,
+        "to_Location": "Avadi",
+        "Distance": 335
+      },
+      {
+        "LId": 6,
+        "to_Location": "Guntur",
+        "Distance": 627
+      },
+      {
+        "LId": 7,
+        "to_Location": "Vizag",
+        "Distance": 1010
+      },
+      {
+        "LId": 8,
+        "to_Location": "Hyderabad",
+        "Distance": 569
+      },
+      {
+        "LId": 9,
+        "to_Location": "Tirupati",
+        "Distance": 247
+      },
+      {
+        "LId": 10,
+        "to_Location": "Nellore",
+        "Distance": 381
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "from_Location": "Tirupati",
+    "possibleROutes": [
+      {
+        "LId": 1,
+        "to_Location": "Vijayawada",
+        "Distance": 411
+      },
+      {
+        "LId": 2,
+        "to_Location": "Kurnool",
+        "Distance": 339
+      },
+      {
+        "LId": 3,
+        "to_Location": "Chennai",
+        "Distance": 135
+      },
+      {
+        "LId": 4,
+        "to_Location": "Machilipatnam",
+        "Distance": 477
+      },
+      {
+        "LId": 5,
+        "to_Location": "Avadi",
+        "Distance": 125
+      },
+      {
+        "LId": 6,
+        "to_Location": "Guntur",
+        "Distance": 374
+      },
+      {
+        "LId": 7,
+        "to_Location": "Vizag",
+        "Distance": 763
+      },
+      {
+        "LId": 8,
+        "to_Location": "Hyderabad",
+        "Distance": 555
+      },
+      {
+        "LId": 9,
+        "to_Location": "Bangalore",
+        "Distance": 248
+      },
+      {
+        "LId": 10,
+        "to_Location": "Nellore",
+        "Distance": 134
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "from_Location": "Nellore",
+    "possibleROutes": [
+      {
+        "LId": 1,
+        "to_Location": "Vijayawada",
+        "Distance": 280
+      },
+      {
+        "LId": 2,
+        "to_Location": "Kurnool",
+        "Distance": 319
+      },
+      {
+        "LId": 3,
+        "to_Location": "Chennai",
+        "Distance": 175
+      },
+      {
+        "LId": 4,
+        "to_Location": "Machilipatnam",
+        "Distance": 345
+      },
+      {
+        "LId": 5,
+        "to_Location": "Avadi",
+        "Distance": 183
+      },
+      {
+        "LId": 6,
+        "to_Location": "Guntur",
+        "Distance": 242
+      },
+      {
+        "LId": 7,
+        "to_Location": "Vizag",
+        "Distance": 632
+      },
+      {
+        "LId": 8,
+        "to_Location": "Hyderabad",
+        "Distance": 454
+      },
+      {
+        "LId": 9,
+        "to_Location": "Bangalore",
+        "Distance": 381
+      },
+      {
+        "LId": 10,
+        "to_Location": "Tirupati",
+        "Distance": 134
+      }
+    ]
+  }
+]
