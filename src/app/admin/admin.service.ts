@@ -113,6 +113,13 @@ export class AdminService {
     );
   }
 
+  deleteDriverById(driverId:number):Observable<IDriver[]>{
+    return this.httpClient.delete<IDriver[]>(this.driver_base_Url+driverId).pipe(
+      catchError(this.handleError)
+    );
+  }
+
+
   handleError(eResponse: HttpErrorResponse) {
     if (eResponse.error instanceof ErrorEvent) {
       console.log("Client Side Error =" + eResponse.error.message);

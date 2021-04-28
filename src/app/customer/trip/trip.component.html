@@ -26,10 +26,10 @@
       </td>
     </tr>
   </table>
-  <h4 class="text-info" *ngIf='distance'>Distance : {{distance}} </h4>
+  <h4 class="text-info text-right" *ngIf='distance'>Distance : {{distance}} </h4>
 
 </div>
-<div>
+<div class="container">
   <div class="row">
     <div class="col-sm-6" *ngFor="let item of drivers | calculateBill:distance">
       <div class="card">

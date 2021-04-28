@@ -21,5 +21,12 @@ export class AllDriversSearchComponent implements OnInit {
       (data:IDriver[])=>this.driversArray=data
     )
   }
+  deleteDriverById(driverId: number) {
+    this._adminService.deleteDriverById(driverId).subscribe(
+      (data: IDriver[]) => this.driversArray = data
+    )
+
+
+  }
 
 }
